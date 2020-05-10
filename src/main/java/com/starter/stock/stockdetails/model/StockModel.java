@@ -6,6 +6,9 @@ import yahoofinance.Stock;
 import yahoofinance.YahooFinance;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @Service
 public class StockModel {
@@ -14,7 +17,7 @@ public class StockModel {
     private StockAttributes stockAttributes;
 
     public String stockDetails(String name) throws IOException {
-        //stockAttributes=new StockAttributes();
+
         Stock stock= YahooFinance.get(name);
         System.out.println("stock" + stock.toString());
         stockAttributes.setBid(stock.getQuote().getBid());
@@ -29,6 +32,14 @@ public class StockModel {
 
         return stockAttributes.toString();
     }
+
+    public Map<String,Stock> stockDetailsList(List<String> stockList) throws IOException {
+        String[] strings = stockList.toArray(String[]::new);
+        Map<String,Stock> xyz= YahooFinance.get(strings);
+        List<String> addString = new ArrayList<>();
+        return xyz;
+    }
+
 
 
 }

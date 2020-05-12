@@ -20,4 +20,5 @@ public class StockAttributes {
     BigDecimal dividend;
     BigDecimal change;
     BigDecimal bid;
+    String symbol;
 }

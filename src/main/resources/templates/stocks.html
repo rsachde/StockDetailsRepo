@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Your Stock Detail</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body th:style="'background: url(/money.jpg)'">
+
+<h3><strong> Details of entered stock</strong></h3>
+<table class="table table-hover table-bordered">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Stock</th>
+        <th scope="col">Price</th>
+        <th scope="col">Lowest-Day</th>
+        <th scope="col">Lowest-Year</th>
+        <th scope="col">Highest-Day</th>
+        <th scope="col">Highest-Year</th>
+        <th scope="col">Change</th>
+        <th scope="col">Dividend</th>
+    <tr>
+    </thead>
+        <td scope="row" th:text="${value.symbol}"></td>
+        <td scope="row" th:text="${value.price}">0</td>
+        <td scope="row" th:text="${value.dayLow}">0</td>
+        <td scope="row"th:text="${value.yearLow}"></td>
+        <td scope="row" th:text="${value.dayHigh}">0</td>
+        <td scope="row" th:text="${value.yearHigh}">0</td>
+        <td scope="row" th:text="${value.change}">0</td>
+        <td scope="row" th:text="${value.dividend}">0</td>
+    </tr>
+</table>
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Your Stock Detail</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body th:style="'background: url(/money.jpg)'">
+<span class="border border-primary">
+<div class="container">
+    <div class="hero-unit">
+<p>Welcome to Stock API! Get started quicky by providing stock name</p>
+<form action="#" th:action="@{/stock/start}"  method="get">
+    <div class="form-group">
+     Stock Name:   <input type="text" name="StockName" />
+    </div>
+    <button  class="btn btn-primary" name="submit" type="submit" value-="0">Submit</button>
+</form>
+    </div>
+</div>
+</span>
+</body>
+</html>
